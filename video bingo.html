@@ -1,0 +1,1339 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <meta http-equiv="x-ua-compatible" content="ie=edge">
+   <title>Bingo  Game</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="css/css.css">
+   
+   <style>
+   .precontent{display:none;}
+   div.prize_line div {
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-box-shadow: 5px 5px 8px #CCC;
+    -webkit-box-shadow: 5px 5px 8px #CCC;
+    box-shadow: 5px 5px 8px #CCC;
+    z-index: 9999;
+    }
+    div.prize_line1 div {
+        border-radius: 4px;
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        -moz-box-shadow: 5px 5px 8px #CCC;
+        -webkit-box-shadow: 5px 5px 8px #CCC;
+        box-shadow: 5px 5px 8px #CCC;
+        z-index: 999;
+    }
+    div.prize_line2 div {
+        border-radius: 4px;
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        -moz-box-shadow: 5px 5px 8px #CCC;
+        -webkit-box-shadow: 5px 5px 8px #CCC;
+        box-shadow: 5px 5px 8px #CCC;
+        z-index: 99;
+    }
+    div.prize_line3 div {
+        border-radius: 4px;
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        -moz-box-shadow: 5px 5px 8px #CCC;
+        -webkit-box-shadow: 5px 5px 8px #CCC;
+        box-shadow: 5px 5px 8px #CCC;
+        z-index: 9;
+    }
+
+   </style>
+
+
+
+
+
+
+
+
+   <style>
+    .header_content {
+        width: 95%;
+        height: 70px;
+        margin: auto;
+    }
+    .logo {
+        float: left;
+        display: table;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .main_top {
+    float: left;
+    width: 100%;
+}
+.cashir_topbtn {
+    background: none repeat scroll 0 0 #480030;
+    border-radius: 5px;
+    float: left;
+    margin-top: 5px;
+    width: 31%;
+    color: #FFF;
+    font-size: 15px;
+    font-weight: bold;
+    z-index: 9;
+    cursor: pointer;
+    /* height: auto; */
+    height: auto;
+    margin: 1.1%;
+    padding: 5px 0;
+    line-height: 18px;
+}
+.cashir_btntext {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: auto;
+}
+.header_time {
+    color: #fff;
+    font-weight: bold;
+    float: left;
+    display: table;
+    font-size: 15px;
+    padding-top: 0;
+    margin-left: 5px;
+    width: 31%;
+    margin: 1%;
+    height: auto;
+    margin: 1.1%;
+    padding: 5px 0;
+    line-height: 18px;
+}
+.schedulebuytickets_topbtn {
+    background: none repeat scroll 0 0 #480030;
+    border-radius: 5px;
+    float: left;
+    height: 22px;
+    margin-top: 5px;
+    margin-left: 5px;
+    width: 31%;
+    color: #FFF;
+    font-size: 15px;
+    font-weight: bold;
+    z-index: 9;
+    cursor: pointer;
+    height: auto;
+    margin: 1.1%;
+    padding: 5px 0;
+    line-height: 18px;
+}
+.header_lang {
+    color: #fff;
+    font-weight: bold;
+    float: right;
+    font-size: 12px;
+    margin-top: 6px;
+    z-index: 999;
+    width: 31%;
+    margin: 1.1%;
+    text-align: center;
+}
+#langs_drop ul li {
+    float: left;
+    height: 25px;
+    margin: auto;
+    line-height: 25px;
+    width: 100%;
+    text-align: center;
+}
+.soundcontrolers {
+    float: right;
+    margin-right: 5px;
+    width: 31%;
+    margin-top: 5px;
+    margin: 1.1%;
+}
+.screen {
+    cursor: pointer;
+    float: right;
+    margin-left: 25px;
+    background-image: url(../images/but_fullscreen.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 31%;
+    background-position-x: -25px;
+    margin: 1.1%;
+    width: 31%;
+    /* text-align: right; */
+    /* justify-content: right; */
+    /* float: right; */
+}
+.moff {
+    /* margin-left: 25px; */
+    /* background-position-x: -25px; */
+    margin: 1.1%;
+    width: 31%;
+}
+.soff {
+    margin-right: 10px;
+    background-position-x: 10px;
+    margin: 1.1%;
+    width: 31%;
+}
+div.prize_line {
+    outline: none;
+    z-index: 9999;
+    width: 48%;
+    margin: 1%;
+}
+div.prize_line1 {
+    outline: none;
+    z-index: 999;
+    width: 48%;
+    margin: 1%;
+}
+.prize_text {
+    position: relative;
+    top: 5px;
+    font-size: 18px;
+    line-height: 20px;
+}
+div.prize_line2 {
+    outline: none;
+    z-index: 99;
+    width: 48%;
+    margin: 1%;
+}
+div.prize_line3 {
+    outline: none;
+    z-index: 9;
+    width: 48%;
+    margin: 1%;
+}
+.ticker {
+    width: 98%;
+    height: 46px;
+    background: black;
+    float: right;
+    margin-top: 10px;
+    /* margin-right: 10px; */
+    border-radius: 5px;
+    text-align: center;
+    margin: 1%;
+}
+.my_tickets {
+    border-radius: 10px;
+    width: 95%;
+    height: 350px;
+    background: black;
+    float: none;
+    position: relative; 
+    right: 0;
+    border: 1px solid #cb1080;
+    margin: auto;
+    margin-top: 60px;
+}
+.up_down_btn {
+    float: right;
+    position: relative;
+    top: 0;
+    right: 15px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.my_ticket_container {
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    top: 25px;
+    margin-left: 0px;
+}
+.current_ball {
+    width: 95%;
+    height: 135px;
+    background: #ffd126;
+    border-radius: 5px;
+    float: none;
+    position: relative;
+    left: 0;
+    top: 0;
+    text-align: center;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    margin: auto;
+    margin-top: 20px;
+}
+.cur_ball_large {
+    position: absolute;
+    left: 38%;
+    width: 55px;
+    top: 29.2%;
+    font-weight: bolder;
+    font-size: 36px;
+    text-align: center;
+}
+.header_content {
+    width: 95%;
+    height: 70px;
+    margin: auto;
+}
+   </style>
+
+    </head>
+<body class="body" id="bingogamescreen"><img class="precontent" src="images/ball_no_number.png">
+    <img class="precontent" src="images/bg.jpg">
+    <img class="precontent" src="images/bingo_popup.png">
+    <img class="precontent" src="images/btn_close.png">
+    <img class="precontent" src="images/BUY_TICJKET_POP_BG.png">
+    <img class="precontent" src="images/current_ball_img.png">
+    <img class="precontent" src="images/d_btn.png">
+    <img class="precontent" src="images/green_check.png">
+    <img class="precontent" src="images/header_bg.jpg">
+    <img class="precontent" src="images/homepage.jpg">
+    <img class="precontent" src="images/index_r4_c3.png">
+    <img class="precontent" src="images/jackpot_line_popup.png">
+    <img class="precontent" src="images/jackpot_title.png">
+    <img class="precontent" src="images/jackpots.jpg">
+    <img class="precontent" src="images/line_popup.png">
+    <img class="precontent" src="images/logo.png">
+    <img class="precontent" src="images/next_play_title.png">
+    <img class="precontent" src="images/promo.jpg">
+    <img class="precontent" src="images/red_check.png">
+    <img class="precontent" src="images/SYS1.jpg">
+   
+    <img class="precontent" src="images/u_btn.png">
+    <img class="precontent" src="images/winner_title.png">
+    <img class="precontent" src="images/audio_icon.png">
+    <img class="precontent" src="images/bg-tile.png">
+    <img class="precontent" src="images/digits-min.png">
+    <img class="precontent" src="images/digits.png">
+    <img class="precontent" src="images/thead.png">
+    <img class="precontent" src="images/time-placeholder.png">
+    <img class="precontent" src="images/callout.gif">
+    <img class="precontent" src="images/sound.png">
+    <img class="precontent" src="images/music.png">
+   <img class="precontent" src="images/but_Play.png">
+
+   <link rel="icon" href="images/logo.png" type="image/png">
+   <meta name="description" content="">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+   <meta name="apple-mobile-web-app-capable" content="yes">
+   <script src="gamejs/jquery.min.js" type="text/javascript"></script>
+
+   <link rel="stylesheet" type="text/css" href="css/style.css?var=45"><link href="css/css.css?var=45" rel="stylesheet" type="text/css"><script src="js/jquery.marquee.min.js?var=45" type="text/javascript"></script>
+
+<div style="display:block;">
+<script>
+var click = new Audio("https://exchinf.com/sounds/click.mp3");
+var chip = new Audio("https://exchinf.com/sounds/chip.mp3");
+var pidkey = "ka5uw9owsnxq/z1/ijznz05wdyjn5gd5vxqjrdsxwbc=";
+
+
+var vc_1_4 = new Audio("https://exchinf.com/event_sounds/wait1.mp3");
+
+var vc_2_5 = new Audio("https://exchinf.com/event_sounds/waitforline.mp3");
+
+var vc_3_5 = new Audio("https://exchinf.com/event_sounds/waitforline2.mp3");
+
+var vc_4_5 = new Audio("https://exchinf.com/event_sounds/wait3.mp3");
+
+var vc_5_4 = new Audio("https://exchinf.com/event_sounds/count.mp3");
+
+var vc_6_2 = new Audio("https://exchinf.com/event_sounds/bingo.mp3");
+
+var vc_7_2 = new Audio("https://exchinf.com/event_sounds/bingo1.mp3");
+
+var vc_8_2 = new Audio("https://exchinf.com/event_sounds/bingo3.mp3");
+
+var vc_9_2 = new Audio("https://exchinf.com/event_sounds/bingo4.mp3");
+
+var vc_10_1 = new Audio("https://exchinf.com/event_sounds/line.mp3");
+
+var vc_11_1 = new Audio("https://exchinf.com/event_sounds/line1.mp3");
+
+var vc_12_1 = new Audio("https://exchinf.com/event_sounds/line2.mp3");
+
+var vc_13_3 = new Audio("https://exchinf.com/event_sounds/start.mp3");
+
+var vc_14_3 = new Audio("https://exchinf.com/event_sounds/start1.mp3");
+
+var vc_15_2 = new Audio("https://exchinf.com/event_sounds/bingo4.mp3");
+
+var vc_16_2 = new Audio("https://exchinf.com/event_sounds/bingo5.mp3");
+
+var vc_17_3 = new Audio("https://exchinf.com/event_sounds/start2.mp3");
+
+var vc_18_1 = new Audio("https://exchinf.com/event_sounds/line4.mp3");
+
+var vc_19_3 = new Audio("https://exchinf.com/event_sounds/start5.mp3");
+
+var vc_20_3 = new Audio("https://exchinf.com/event_sounds/start6.mp3");
+
+var vc_21_3 = new Audio("https://exchinf.com/event_sounds/start7.mp3");
+
+var vc_22_2 = new Audio("https://exchinf.com/event_sounds/bingo7.mp3");
+
+var vc_23_2 = new Audio("https://exchinf.com/event_sounds/bingo8.mp3");
+
+var vc_24_1 = new Audio("https://exchinf.com/event_sounds/line6.mp3");
+
+var vc_25_3 = new Audio("https://exchinf.com/event_sounds/start8.mp3");
+
+var vc_26_6 = new Audio("https://exchinf.com/event_sounds/scratch_scrape.mp3");
+
+var vc_27_7 = new Audio("https://exchinf.com/event_sounds/Cash Register Cha Ching-SoundBible.com-184076484.mp3");
+
+var num_1 = new Audio("https://exchinf.com/voice_sounds/1.mp3");
+
+var num_2 = new Audio("https://exchinf.com/voice_sounds/2.mp3");
+
+var num_3 = new Audio("https://exchinf.com/voice_sounds/3.mp3");
+
+var num_4 = new Audio("https://exchinf.com/voice_sounds/4.mp3");
+
+var num_5 = new Audio("https://exchinf.com/voice_sounds/5.mp3");
+
+var num_6 = new Audio("https://exchinf.com/voice_sounds/6.mp3");
+
+var num_7 = new Audio("https://exchinf.com/voice_sounds/7.mp3");
+
+var num_8 = new Audio("https://exchinf.com/voice_sounds/8.mp3");
+
+var num_9 = new Audio("https://exchinf.com/voice_sounds/9.mp3");
+
+var num_10 = new Audio("https://exchinf.com/voice_sounds/10.mp3");
+
+var num_11 = new Audio("https://exchinf.com/voice_sounds/11.mp3");
+
+var num_12 = new Audio("https://exchinf.com/voice_sounds/12.mp3");
+
+var num_13 = new Audio("https://exchinf.com/voice_sounds/13.mp3");
+
+var num_14 = new Audio("https://exchinf.com/voice_sounds/14.mp3");
+
+var num_15 = new Audio("https://exchinf.com/voice_sounds/15.mp3");
+
+var num_16 = new Audio("https://exchinf.com/voice_sounds/16.mp3");
+
+var num_17 = new Audio("https://exchinf.com/voice_sounds/17.mp3");
+
+var num_18 = new Audio("https://exchinf.com/voice_sounds/18.mp3");
+
+var num_19 = new Audio("https://exchinf.com/voice_sounds/19.mp3");
+
+var num_20 = new Audio("https://exchinf.com/voice_sounds/20.mp3");
+
+var num_21 = new Audio("https://exchinf.com/voice_sounds/21.mp3");
+
+var num_22 = new Audio("https://exchinf.com/voice_sounds/22.mp3");
+
+var num_23 = new Audio("https://exchinf.com/voice_sounds/23.mp3");
+
+var num_24 = new Audio("https://exchinf.com/voice_sounds/24.mp3");
+
+var num_25 = new Audio("https://exchinf.com/voice_sounds/25.mp3");
+
+var num_26 = new Audio("https://exchinf.com/voice_sounds/26.mp3");
+
+var num_27 = new Audio("https://exchinf.com/voice_sounds/27.mp3");
+
+var num_28 = new Audio("https://exchinf.com/voice_sounds/28.mp3");
+
+var num_29 = new Audio("https://exchinf.com/voice_sounds/29.mp3");
+
+var num_30 = new Audio("https://exchinf.com/voice_sounds/30.mp3");
+
+var num_31 = new Audio("https://exchinf.com/voice_sounds/31.mp3");
+
+var num_32 = new Audio("https://exchinf.com/voice_sounds/32.mp3");
+
+var num_33 = new Audio("https://exchinf.com/voice_sounds/33.mp3");
+
+var num_34 = new Audio("https://exchinf.com/voice_sounds/34.mp3");
+
+var num_35 = new Audio("https://exchinf.com/voice_sounds/35.mp3");
+
+var num_36 = new Audio("https://exchinf.com/voice_sounds/36.mp3");
+
+var num_37 = new Audio("https://exchinf.com/voice_sounds/37.mp3");
+
+var num_38 = new Audio("https://exchinf.com/voice_sounds/38.mp3");
+
+var num_39 = new Audio("https://exchinf.com/voice_sounds/39.mp3");
+
+var num_40 = new Audio("https://exchinf.com/voice_sounds/40.mp3");
+
+var num_41 = new Audio("https://exchinf.com/voice_sounds/41.mp3");
+
+var num_42 = new Audio("https://exchinf.com/voice_sounds/42.mp3");
+
+var num_43 = new Audio("https://exchinf.com/voice_sounds/43.mp3");
+
+var num_44 = new Audio("https://exchinf.com/voice_sounds/44.mp3");
+
+var num_45 = new Audio("https://exchinf.com/voice_sounds/45.mp3");
+
+var num_46 = new Audio("https://exchinf.com/voice_sounds/46.mp3");
+
+var num_47 = new Audio("https://exchinf.com/voice_sounds/47.mp3");
+
+var num_48 = new Audio("https://exchinf.com/voice_sounds/48.mp3");
+
+var num_49 = new Audio("https://exchinf.com/voice_sounds/49.mp3");
+
+var num_50 = new Audio("https://exchinf.com/voice_sounds/50.mp3");
+
+var num_51 = new Audio("https://exchinf.com/voice_sounds/51.mp3");
+
+var num_52 = new Audio("https://exchinf.com/voice_sounds/52.mp3");
+
+var num_53 = new Audio("https://exchinf.com/voice_sounds/53.mp3");
+
+var num_54 = new Audio("https://exchinf.com/voice_sounds/54.mp3");
+
+var num_55 = new Audio("https://exchinf.com/voice_sounds/55.mp3");
+
+var num_56 = new Audio("https://exchinf.com/voice_sounds/56.mp3");
+
+var num_57 = new Audio("https://exchinf.com/voice_sounds/57.mp3");
+
+var num_58 = new Audio("https://exchinf.com/voice_sounds/58.mp3");
+
+var num_59 = new Audio("https://exchinf.com/voice_sounds/59.mp3");
+
+var num_60 = new Audio("https://exchinf.com/voice_sounds/60.mp3");
+
+var num_61 = new Audio("https://exchinf.com/voice_sounds/61.mp3");
+
+var num_62 = new Audio("https://exchinf.com/voice_sounds/62.mp3");
+
+var num_63 = new Audio("https://exchinf.com/voice_sounds/63.mp3");
+
+var num_64 = new Audio("https://exchinf.com/voice_sounds/64.mp3");
+
+var num_65 = new Audio("https://exchinf.com/voice_sounds/65.mp3");
+
+var num_66 = new Audio("https://exchinf.com/voice_sounds/66.mp3");
+
+var num_67 = new Audio("https://exchinf.com/voice_sounds/67.mp3");
+
+var num_68 = new Audio("https://exchinf.com/voice_sounds/68.mp3");
+
+var num_69 = new Audio("https://exchinf.com/voice_sounds/69.mp3");
+
+var num_70 = new Audio("https://exchinf.com/voice_sounds/70.mp3");
+
+var num_71 = new Audio("https://exchinf.com/voice_sounds/71.mp3");
+
+var num_72 = new Audio("https://exchinf.com/voice_sounds/72.mp3");
+
+var num_73 = new Audio("https://exchinf.com/voice_sounds/73.mp3");
+
+var num_74 = new Audio("https://exchinf.com/voice_sounds/74.mp3");
+
+var num_75 = new Audio("https://exchinf.com/voice_sounds/75.mp3");
+
+var num_76 = new Audio("https://exchinf.com/voice_sounds/76.mp3");
+
+var num_77 = new Audio("https://exchinf.com/voice_sounds/77.mp3");
+
+var num_78 = new Audio("https://exchinf.com/voice_sounds/78.mp3");
+
+var num_79 = new Audio("https://exchinf.com/voice_sounds/79.mp3");
+
+var num_80 = new Audio("https://exchinf.com/voice_sounds/80.mp3");
+
+var num_81 = new Audio("https://exchinf.com/voice_sounds/81.mp3");
+
+var num_82 = new Audio("https://exchinf.com/voice_sounds/82.mp3");
+
+var num_83 = new Audio("https://exchinf.com/voice_sounds/83.mp3");
+
+var num_84 = new Audio("https://exchinf.com/voice_sounds/84.mp3");
+
+var num_85 = new Audio("https://exchinf.com/voice_sounds/85.mp3");
+
+var num_86 = new Audio("https://exchinf.com/voice_sounds/86.mp3");
+
+var num_87 = new Audio("https://exchinf.com/voice_sounds/87.mp3");
+
+var num_88 = new Audio("https://exchinf.com/voice_sounds/88.mp3");
+
+var num_89 = new Audio("https://exchinf.com/voice_sounds/89.mp3");
+
+var num_90 = new Audio("https://exchinf.com/voice_sounds/90.mp3");
+
+
+var langid = 1;
+</script>
+
+
+
+
+<input id="currency_symbol" type="hidden" value="€">
+<input id="stake_multiplier" type="hidden" value="5">
+<input id="ubalerr" type="hidden" value="you have insufficient balance">
+<input id="game_id" type="hidden" value="29333">
+<input id="lblmin" type="hidden" value="Minimum">
+<input id="lbltcktr" type="hidden" value="tickets required to start the game">
+</div>
+ 
+ <script>
+     var server_address = "wss://exchinf.com/scktserver";
+     var clientipaddress = '95.168.118.8';
+     var total_tickets = 0;
+	 var pidkey = 'ka5uw9owsnxq/z1/ijznz05wdyjn5gd5vxqjrdsxwbc=';
+	 
+     var homeurl="https://www.betmagics.com/";
+ </script>
+ <div id="extra_script"><script>play_sound(num_15); waitsound = vc_4_5;</script></div>
+ <script src="gamejs/socket.js?var=45" type="text/javascript"></script>
+ <script src="gamejs/functions.js?var=45" type="text/javascript"></script>
+
+
+
+
+<header>
+    <div class="header">
+    <div class="header_content">
+
+     <div class="logo">
+          <img src="images/logo.png" width="223" height="63" alt="BingoBet">
+     </div>
+
+     <div class="main_top">
+     <div class="top_line">
+        <div class="user_info" id="user_info_div" runat="server">Hi, Your Current Balance is : €<span class="ubal">0</span></div>
+
+       
+		<div class="cashir_topbtn" onclick="show_hide_mybets_form();">
+          <span id="cashier_btn" class="cashir_btntext">My Bets</span>
+        </div>
+		
+          <div class="header_time">
+          <span id="time_lbls">Time: </span>
+          <span id="time_elapsed">00:00</span>
+        </div>
+
+		
+		
+        <div class="schedulebuytickets_topbtn" onclick="show_hide_buytickets_form();">
+          <span id="buyscheduleticket_btn" class="cashir_btntext">Buy Ticket</span>
+        </div>
+        
+		
+		
+        <div class="header_logout">
+          <span>
+          <a href="javascript:logoutBingorup(1,'https://www.betmagics.com/');" style="color:White; text-decoration:none;">Home</a>
+          </span>
+        </div>
+
+  <div class="header_lang">
+         
+<div id="lng_div">
+<div id="langs_drop">
+    <ul>
+	
+<li><a href="javascript:" title="English"><img src="images/eng.png" width="32" height="18"></a>	<ul class="sub_langs"><li><a href="javascript:changelang(2);" title="Hebrew"><img src="images/heb.png" width="32" height="18"></a></li><li><a href="javascript:changelang(3);" title="Bulgarian"><img src="images/bulgarian.png" width="32" height="18"></a></li>
+
+         </ul>
+        </li>
+        
+    </ul>
+    </div>
+</div>
+
+<script>
+
+
+    function changelang(lang) {
+        setGetParameter("langid", lang);
+    }
+
+
+    function setGetParameter(paramName, paramValue) {
+        var url = window.location.href;
+        var hash = location.hash;
+        url = url.replace(hash, '');
+        if (url.indexOf(paramName + "=") >= 0) {
+            var prefix = url.substring(0, url.indexOf(paramName + "="));
+            var suffix = url.substring(url.indexOf(paramName + "="));
+            suffix = suffix.substring(suffix.indexOf("=") + 1);
+            suffix = (suffix.indexOf("&") >= 0) ? suffix.substring(suffix.indexOf("&")) : "";
+            url = prefix + paramName + "=" + paramValue + suffix;
+        }
+        else {
+            if (url.indexOf("?") < 0)
+                url += "?" + paramName + "=" + paramValue;
+            else
+                url += "&" + paramName + "=" + paramValue;
+        }
+        window.location.href = url + hash;
+    }
+</script>
+
+        </div>
+		
+      <div class="soundcontrolers">
+	  <div class="screen" onclick="switcscreen();">&nbsp;</div>
+      <div class="music moff" onclick="switchmusic();">&nbsp;</div>
+      <div class="sound soff" onclick="switchsound();">&nbsp;</div>
+	  
+	  
+	  
+      </div>
+      
+
+     </div>
+
+     <div class="prizes_div bottom_line"><script>$('#total_tickets_in_game').html(24);</script>
+<div class="prize_line" id="line_prize">
+        <span class="prize_text">Line : <span id="line_span">€16.8</span></span>
+        <div><img class="callout" src="images/callout.gif">First player who fills any line wins the line prize.</div>
+        </div>
+
+         <div class="prize_line1" id="bingo_prize">
+        <span class="prize_text">Bingo : <span id="bingo_span">€67.2</span></span>
+        <div style="display: none;"><img class="callout" src="images/callout.gif">First player who fills a ticket wins the bingo prize.</div>
+        </div>
+
+         <div class="prize_line2" id="snowball_prize">
+          <span class="prize_text">SnowBall : <span id="snowball_span">€60</span></span>
+          <div style="display: none;"><img class="callout" src="images/callout.gif">if bingo is called within 44 balls, the SnowBall prize goes to the winner.</div>
+        </div>
+
+         <div class="prize_line3" id="jackpot_prize">
+          <span class="prize_text">JackPot : <span id="jackpot_span">€380.34</span></span>
+          <div style="display: none;"><img class="callout" src="images/callout.gif">When Prima counter reaches 500, the next game: Huge prizes guranteed! DO NOT MISS IT!</div>
+        </div>
+
+        </div>
+
+     </div>
+
+    </div>
+    </div>
+</header>
+
+       <section>
+	   
+            <div class="content_body">
+              
+              
+                <div class="ticker" id="marq_div"></div>
+
+                <div id="tickets_holder" class="my_tickets">
+
+                   <div class="up_down_btn">
+                      <img src="images/d_btn.png" id="downClick" onclick="down_tickets();">
+                      <img src="images/u_btn.png" onclick="up_tickets();" id="upClick"> 
+                         </div>
+                         <div class="my_tickets_title"> <span id="my_tickets_lbl">My Tickets :  </span> <span style="color:white" id="total_tickets">0</span></div>
+                      <div class="my_ticket_container">
+
+<script>    
+document.getElementById('total_tickets').innerHTML = 0; 
+</script>
+
+</div>
+                </div>
+
+                <div id="current_ball" class="current_ball">
+                <div class="cur_ball_large">15</div>
+                <img src="images/ball_no_number.png" width="118px">
+                <div style="position: relative; width: 95%; text-align: center; height: 30px; margin: auto;">
+                <div class="val_one">65</div>
+                <div class="val_two">12</div>
+                <div class="val_three">87</div>
+                </div>
+                </div>
+
+                <div class="numbers_board">
+                    <div id="ballout_img_s" class="ballout_img_s">
+                    <div class="cur_ball_small">15</div>
+                    <img src="images/ball_no_number.png" width="36" height="36" style="margin-top:9px">
+                    </div>
+                    <div class="numberboard_title" id="num_brd_lbl">Number Board</div>
+                    <div class="ball_out"><span id="bll_ot_lbl">Balls Out:</span><span id="total_out_balls">38</span></div>
+                    <div class="number_show">
+                        <table width="100%" style="position:relative;top:0px; padding-top: 5px;" border="0" cellspacing="0" cellpadding="1"><tbody><tr><td><div class="number_holder_selected" id="num_1">1</div></td><td><div class="number_holder_selected" id="num_2">2</div></td><td><div class="number_holder" id="num_3">3</div></td><td><div class="number_holder_selected" id="num_4">4</div></td><td><div class="number_holder" id="num_5">5</div></td><td><div class="number_holder_selected" id="num_6">6</div></td><td><div class="number_holder" id="num_7">7</div></td><td><div class="number_holder" id="num_8">8</div></td><td><div class="number_holder_selected" id="num_9">9</div></td><td><div class="number_holder" id="num_10">10</div></td></tr><tr><td><div class="number_holder_selected" id="num_11">11</div></td><td><div class="number_holder_selected" id="num_12">12</div></td><td><div class="number_holder" id="num_13">13</div></td><td><div class="number_holder" id="num_14">14</div></td><td><div class="number_holder_selected" id="num_15">15</div></td><td><div class="number_holder_selected" id="num_16">16</div></td><td><div class="number_holder_selected" id="num_17">17</div></td><td><div class="number_holder" id="num_18">18</div></td><td><div class="number_holder_selected" id="num_19">19</div></td><td><div class="number_holder" id="num_20">20</div></td></tr><tr><td><div class="number_holder_selected" id="num_21">21</div></td><td><div class="number_holder" id="num_22">22</div></td><td><div class="number_holder" id="num_23">23</div></td><td><div class="number_holder_selected" id="num_24">24</div></td><td><div class="number_holder" id="num_25">25</div></td><td><div class="number_holder_selected" id="num_26">26</div></td><td><div class="number_holder" id="num_27">27</div></td><td><div class="number_holder" id="num_28">28</div></td><td><div class="number_holder" id="num_29">29</div></td><td><div class="number_holder_selected" id="num_30">30</div></td></tr><tr><td><div class="number_holder" id="num_31">31</div></td><td><div class="number_holder_selected" id="num_32">32</div></td><td><div class="number_holder_selected" id="num_33">33</div></td><td><div class="number_holder_selected" id="num_34">34</div></td><td><div class="number_holder" id="num_35">35</div></td><td><div class="number_holder_selected" id="num_36">36</div></td><td><div class="number_holder" id="num_37">37</div></td><td><div class="number_holder_selected" id="num_38">38</div></td><td><div class="number_holder_selected" id="num_39">39</div></td><td><div class="number_holder" id="num_40">40</div></td></tr><tr><td><div class="number_holder_selected" id="num_41">41</div></td><td><div class="number_holder" id="num_42">42</div></td><td><div class="number_holder" id="num_43">43</div></td><td><div class="number_holder" id="num_44">44</div></td><td><div class="number_holder" id="num_45">45</div></td><td><div class="number_holder" id="num_46">46</div></td><td><div class="number_holder" id="num_47">47</div></td><td><div class="number_holder" id="num_48">48</div></td><td><div class="number_holder" id="num_49">49</div></td><td><div class="number_holder" id="num_50">50</div></td></tr><tr><td><div class="number_holder" id="num_51">51</div></td><td><div class="number_holder" id="num_52">52</div></td><td><div class="number_holder_selected" id="num_53">53</div></td><td><div class="number_holder" id="num_54">54</div></td><td><div class="number_holder_selected" id="num_55">55</div></td><td><div class="number_holder" id="num_56">56</div></td><td><div class="number_holder_selected" id="num_57">57</div></td><td><div class="number_holder" id="num_58">58</div></td><td><div class="number_holder_selected" id="num_59">59</div></td><td><div class="number_holder" id="num_60">60</div></td></tr><tr><td><div class="number_holder" id="num_61">61</div></td><td><div class="number_holder_selected" id="num_62">62</div></td><td><div class="number_holder" id="num_63">63</div></td><td><div class="number_holder_selected" id="num_64">64</div></td><td><div class="number_holder_selected" id="num_65">65</div></td><td><div class="number_holder_selected" id="num_66">66</div></td><td><div class="number_holder" id="num_67">67</div></td><td><div class="number_holder_selected" id="num_68">68</div></td><td><div class="number_holder" id="num_69">69</div></td><td><div class="number_holder_selected" id="num_70">70</div></td></tr><tr><td><div class="number_holder" id="num_71">71</div></td><td><div class="number_holder" id="num_72">72</div></td><td><div class="number_holder" id="num_73">73</div></td><td><div class="number_holder" id="num_74">74</div></td><td><div class="number_holder" id="num_75">75</div></td><td><div class="number_holder" id="num_76">76</div></td><td><div class="number_holder_selected" id="num_77">77</div></td><td><div class="number_holder" id="num_78">78</div></td><td><div class="number_holder" id="num_79">79</div></td><td><div class="number_holder" id="num_80">80</div></td></tr><tr><td><div class="number_holder" id="num_81">81</div></td><td><div class="number_holder_selected" id="num_82">82</div></td><td><div class="number_holder" id="num_83">83</div></td><td><div class="number_holder_selected" id="num_84">84</div></td><td><div class="number_holder_selected" id="num_85">85</div></td><td><div class="number_holder" id="num_86">86</div></td><td><div class="number_holder_selected" id="num_87">87</div></td><td><div class="number_holder_selected" id="num_88">88</div></td><td><div class="number_holder_selected" id="num_89">89</div></td><td><div class="number_holder" id="num_90">90</div></td></tr></tbody></table>
+                    </div>
+                </div>
+
+                <div class="ticket_ingame">
+                <div class="ticket_ingame_heading"><span id="tckts_in_gme">Tickets in game</span>
+                <div id="total_tickets_in_game" class="total_tickets_in_game">24</div>
+                </div>
+                <div class="top_ten_heading" id="top_ten_lbl">Top 10</div>
+
+                <div id="top_ten_list" class="top_ten_list"><table id="toptenlist" style="width: 80%; margin: auto;"><tbody><tr><td>1.</td><td><div class="tcn"><div class="top_ten_number_holder">50</div><div class="top_ten_number_holder">60</div><div class="top_ten_number_holder">75</div><div class="top_ten_number_holder">22</div><div class="top_ten_number_holder">73</div><div class="tct"><img class="callout" src="images/callout.gif">TN.#2467</div></div></td></tr><tr><td>2.</td><td><div class="tcn"><div class="top_ten_number_holder">5</div><div class="top_ten_number_holder">58</div><div class="top_ten_number_holder">72</div><div class="top_ten_number_holder">37</div><div class="top_ten_number_holder">40</div><div class="top_ten_number_holder">51</div><div class="top_ten_number_holder">60</div><div class="tct"><img class="callout" src="images/callout.gif">TN.#2454</div></div></td></tr><tr><td>3.</td><td><div class="tcn"><div class="top_ten_number_holder">7</div><div class="top_ten_number_holder">46</div><div class="top_ten_number_holder">50</div><div class="top_ten_number_holder">8</div><div class="top_ten_number_holder">14</div><div class="top_ten_number_holder">20</div><div class="top_ten_number_holder">83</div><div class="tct"><img class="callout" src="images/callout.gif">TN.#2453</div></div></td></tr><tr><td>4.</td><td><div class="tcn"><div class="top_ten_number_holder">28</div><div class="top_ten_number_holder">40</div><div class="top_ten_number_holder">8</div><div class="top_ten_number_holder">56</div><div class="top_ten_number_holder">61</div><div class="top_ten_number_holder">25</div><div class="top_ten_number_holder">50</div><div class="tct"><img class="callout" src="images/callout.gif">TN.#2451</div></div></td></tr><tr><td>5.</td><td><div class="tcn"><div class="top_ten_number_holder">50</div><div class="top_ten_number_holder">80</div><div class="top_ten_number_holder">13</div><div class="top_ten_number_holder">58</div><div class="top_ten_number_holder">72</div><div class="top_ten_number_holder">46</div><div class="top_ten_number_holder">74</div><div class="top_ten_number_holder">83</div><div class="tct"><img class="callout" src="images/callout.gif">TN.#2452</div></div></td></tr><tr><td>6.</td><td><div class="tcn"><div class="top_ten_number_holder">47</div><div class="top_ten_number_holder">56</div><div class="top_ten_number_holder">8</div><div class="top_ten_number_holder">13</div><div class="top_ten_number_holder">50</div><div class="top_ten_number_holder">75</div><div class="top_ten_number_holder">37</div><div class="top_ten_number_holder">42</div><div class="tct"><img class="callout" src="images/callout.gif">TN.#2448</div></div></td></tr><tr><td>7.</td><td><div class="tcn"><div class="top_ten_number_holder">5</div><div class="top_ten_number_holder">73</div><div class="top_ten_number_holder">86</div><div class="top_ten_number_holder">58</div><div class="top_ten_number_holder">75</div><div class="top_ten_number_holder">80</div><div class="top_ten_number_holder">3</div><div class="top_ten_number_holder">42</div><div class="tct"><img class="callout" src="images/callout.gif">TN.#2458</div></div></td></tr><tr><td>8.</td><td><div class="tcn"><div class="top_ten_number_holder">27</div><div class="top_ten_number_holder">31</div><div class="top_ten_number_holder">40</div><div class="top_ten_number_holder">86</div><div class="top_ten_number_holder">7</div><div class="top_ten_number_holder">37</div><div class="top_ten_number_holder">42</div><div class="top_ten_number_holder">61</div><div class="top_ten_number_holder">35</div><div class="tct"><img class="callout" src="images/callout.gif">TN.#2457</div></div></td></tr><tr><td>9.</td><td><div class="tcn"><div class="top_ten_number_holder">23</div><div class="top_ten_number_holder">42</div><div class="top_ten_number_holder">72</div><div class="top_ten_number_holder">18</div><div class="top_ten_number_holder">56</div><div class="top_ten_number_holder">74</div><div class="top_ten_number_holder">3</div><div class="top_ten_number_holder">63</div><div class="top_ten_number_holder">78</div><div class="tct"><img class="callout" src="images/callout.gif">TN.#2461</div></div></td></tr><tr><td>10.</td><td><div class="tcn"><div class="top_ten_number_holder">40</div><div class="top_ten_number_holder">51</div><div class="top_ten_number_holder">10</div><div class="top_ten_number_holder">56</div><div class="top_ten_number_holder">72</div><div class="top_ten_number_holder">22</div><div class="top_ten_number_holder">42</div><div class="top_ten_number_holder">75</div><div class="top_ten_number_holder">81</div><div class="tct"><img class="callout" src="images/callout.gif">TN.#2459</div></div></td></tr></tbody></table>
+<script>
+    var array_values = "24,1,157,2467,<div class=top_ten_number_holder>50</div><div class=top_ten_number_holder>60</div><div class=top_ten_number_holder>75</div><div class=top_ten_number_holder>22</div><div class=top_ten_number_holder>73</div>,152,2454,<div class=top_ten_number_holder>5</div><div class=top_ten_number_holder>58</div><div class=top_ten_number_holder>72</div><div class=top_ten_number_holder>37</div><div class=top_ten_number_holder>40</div><div class=top_ten_number_holder>51</div><div class=top_ten_number_holder>60</div>,152,2453,<div class=top_ten_number_holder>7</div><div class=top_ten_number_holder>46</div><div class=top_ten_number_holder>50</div><div class=top_ten_number_holder>8</div><div class=top_ten_number_holder>14</div><div class=top_ten_number_holder>20</div><div class=top_ten_number_holder>83</div>,152,2451,<div class=top_ten_number_holder>28</div><div class=top_ten_number_holder>40</div><div class=top_ten_number_holder>8</div><div class=top_ten_number_holder>56</div><div class=top_ten_number_holder>61</div><div class=top_ten_number_holder>25</div><div class=top_ten_number_holder>50</div>,152,2452,<div class=top_ten_number_holder>50</div><div class=top_ten_number_holder>80</div><div class=top_ten_number_holder>13</div><div class=top_ten_number_holder>58</div><div class=top_ten_number_holder>72</div><div class=top_ten_number_holder>46</div><div class=top_ten_number_holder>74</div><div class=top_ten_number_holder>83</div>,149,2448,<div class=top_ten_number_holder>47</div><div class=top_ten_number_holder>56</div><div class=top_ten_number_holder>8</div><div class=top_ten_number_holder>13</div><div class=top_ten_number_holder>50</div><div class=top_ten_number_holder>75</div><div class=top_ten_number_holder>37</div><div class=top_ten_number_holder>42</div>,153,2458,<div class=top_ten_number_holder>5</div><div class=top_ten_number_holder>73</div><div class=top_ten_number_holder>86</div><div class=top_ten_number_holder>58</div><div class=top_ten_number_holder>75</div><div class=top_ten_number_holder>80</div><div class=top_ten_number_holder>3</div><div class=top_ten_number_holder>42</div>,153,2457,<div class=top_ten_number_holder>27</div><div class=top_ten_number_holder>31</div><div class=top_ten_number_holder>40</div><div class=top_ten_number_holder>86</div><div class=top_ten_number_holder>7</div><div class=top_ten_number_holder>37</div><div class=top_ten_number_holder>42</div><div class=top_ten_number_holder>61</div><div class=top_ten_number_holder>35</div>,155,2461,<div class=top_ten_number_holder>23</div><div class=top_ten_number_holder>42</div><div class=top_ten_number_holder>72</div><div class=top_ten_number_holder>18</div><div class=top_ten_number_holder>56</div><div class=top_ten_number_holder>74</div><div class=top_ten_number_holder>3</div><div class=top_ten_number_holder>63</div><div class=top_ten_number_holder>78</div>,154,2459,<div class=top_ten_number_holder>40</div><div class=top_ten_number_holder>51</div><div class=top_ten_number_holder>10</div><div class=top_ten_number_holder>56</div><div class=top_ten_number_holder>72</div><div class=top_ten_number_holder>22</div><div class=top_ten_number_holder>42</div><div class=top_ten_number_holder>75</div><div class=top_ten_number_holder>81</div>,";
+    var xc = 0;
+    var count_top = 1;
+
+    $("#total_tickets_in_game").html("24");
+
+    var make_win_cal = 1;
+    var xc = 0;
+    var top_ten_data = "";
+    for (var i = 2; i < array_values.split(',').length; i++) {
+        var uidd = array_values.split(',')[i];
+        var ticket_n = array_values.split(',')[i + 1];
+        var ticket_numbers = array_values.split(',')[i + 2];
+        
+        if(ticket_numbers==0||ticket_numbers==""||ticket_numbers==","||ticket_numbers==undefined){break;}
+
+        var check = "";
+        if (uidd == 347) {
+            check = "<img src='images/red_check.png' />";
+            ticket_numbers = ticket_numbers.replace(/top_ten_number_holder/g, "current_top_ten_number_holder");
+        }
+        else { check = "<img src='images/green_check.png' />"; }
+        if (xc == 0 && ticket_numbers != null) {
+            var t_n = "<div class='tct'><img class='callout' src='images/callout.gif' />TN.#" + ticket_n + "</div>";
+
+            if (ticket_numbers == "") { top_ten_data += "<tr><td>" + check + "</td><td><div class='tcn'>" + ticket_numbers + t_n + "</div></td></tr>"; }
+            else { top_ten_data += "<tr><td>" + count_top + ".</td><td><div class='tcn'>" + ticket_numbers + t_n + "</div></td></tr>"; }
+            count_top++;
+            xc++;
+        } else if (xc == 1) { xc++; } else { xc = 0; }
+    }
+    document.getElementById("toptenlist").innerHTML=top_ten_data;
+</script>
+</div>
+                </div>
+
+
+                 
+              
+               <script>
+                   var row = 0;
+                   var numboardcontent = "";
+                   var array_values = "";
+
+                   function ispushed(val) {
+                       var ismatched = 0;
+                       for (var sharma = 0; sharma < array_values.split(',').length; sharma++) {
+                           if (val == array_values.split(',')[sharma]) { ismatched = 1; break; }
+                       }
+                       return ismatched; 
+                   }
+
+                   for (var rupesh = 1; rupesh < 91; rupesh++) {
+                       var cssclass = "number_holder";
+                       if (ispushed(rupesh) == 1) { cssclass = "number_holder_selected"; }
+                       var line = "<td><div class='" + cssclass + "' id='num_" + rupesh + "'>" + rupesh + "</div></td>";
+                       if (row == 0) {
+                           numboardcontent += "<tr>" + line;
+                           row++;
+                       }
+                       else if (row == 9) {
+                           numboardcontent += line+"</tr>";
+                           row = 0;
+                       }
+                       else {
+                           numboardcontent += line;
+                           row++;
+                       }
+                  }
+                   $(".number_show table").html(numboardcontent);
+
+                   var totalpushed = (array_values.split(',').length - 1);
+                   if (totalpushed > 0) {
+                       if (totalpushed == 1) {
+                            $(".val_one").html(array_values.split(',')[0]);
+                       }
+                       else if (totalpushed == 2) {
+                            $(".val_one").html(array_values.split(',')[0]);
+                            $(".val_two").html(array_values.split(',')[1]);
+                       }
+                       else if (totalpushed > 3) {
+                            $(".val_one").html(array_values.split(',')[0]);
+                            $(".val_two").html(array_values.split(',')[1]);
+                            $(".val_three").html(array_values.split(',')[2]);
+                       }
+                       var curball = 0;
+                       if (curball == 0) {curball = ""; }
+                 
+                        $(".cur_ball_large").html(curball);
+                        $(".cur_ball_small").html(curball);
+                   }
+
+                   
+               </script>
+
+                <div class="buy_ticket_pop" style="display: none;">
+                    
+                    <div class="time_to_next_game_msg"><span id="tme_t_n_gme">Time to Next Game </span><span id="count_down_two">0</span></div> 
+                    <div class="order_ticket_text" id="buy_tckts_ttle">Buy Tickets</div>
+
+                    <div class="ticket_counter">
+                    <div class="direct_count">
+                     <div class="six_count odds_amount">6</div>
+                    <div class="twelve_count odds_amount">12</div>
+                    <div class="twenty_four_count odds_amount">24</div>
+                    <div class="fourty_eight_count odds_amount">48</div>
+                    <div class="hundred_count odds_amount">100</div>
+                    </div>
+                        <div class="morecredit">+</div>
+                        
+                        <div id="counter" class="counter">000</div>
+
+                        <div id="ticket_counter_price" style="color:White;width: 50%;text-align: center;position: absolute;left: 26%;margin-top: 12px;"></div>
+
+                        <div class="lesscredit">-</div>
+
+                       <div class="loadingbar" style="margin-top: 0px;
+                       display: none;
+                       transform: translateY(-30px);"> <img src="images/btnreload-sheet0.png"></div>
+
+                        <div id="buy_tckts_btn" class="buy_btn" onclick="buy_tickets_func();">Buy Tickets</div>
+
+                        <div class="auto_buy_div" id="auto_buy_lbl">
+                            <div style="float:left;"><input id="aut_buy_chk" type="checkbox"></div>
+                            <div style="float: left; padding-top: 0px;  margin-left: 5px;">Auto Buy Tickets</div>
+                        </div>
+                         
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="chat">
+                    <div class="chat_presonal_info">
+                        <div id="chat_div_user" class="chat_presonal_info_text">UserName : 64_rupmagic </div>
+                        <div class="chat_presonal_info_text2"><span id="players_online_lbl">Players Online</span> : <span id="chat_div_tota_online_users">9</span></div>
+                        <div id="chat_div_balance" class="chat_presonal_info_text3">Balance : <span class="ubal">0</span> €</div>
+                    </div>
+                    <div class="chat_box">
+                   
+                   <div id="chat_area"><div><div>player152 won EUR17.5</div></div><div><div>player155 won EUR70</div></div><div><div>player155 won EUR16.8</div></div><div><div>player150 won EUR67.2</div></div><div><div>player152 won EUR16.8</div></div></div>
+
+                   <script>                       $('#chat_area').scrollTop(1000);</script>
+                    <div id="make_chat"><div id="input_chat"><input onkeydown="Javascript: if (event.keyCode==13) send_msg_chat();" id="chat_txt" type="text"></div><div id="btn_chat" title="Send" onclick="send_msg_chat();">Send</div></div>
+                    </div>
+                </div>
+
+
+            </div>
+            
+
+            <div id="deposit_form" class="ontop">
+			<div class="background_deposit">
+        <div class="closedeposit_form" onclick="hidewinpop();">X</div>
+        <div style="    width: 95%; margin-left: auto; margin-right: auto; position: relative;top: 20%; left: 0; position: relative; text-align: left; font-size: 21px; font-family: sans-serif;  letter-spacing: -1px; font-weight: bold;z-index: 10000;text-align: center;">
+        <div id="someinfotext_one">To Deposite money to your accout by Ccard</div>
+        <div id="someinfotext_two">Please enter the serial number of the card and the hidden number after.</div>
+        <br><br>
+        
+        <span id="prep_num_lbl">Enter Prepaid Card Numbers</span>
+        <table>
+        
+        <tbody><tr>
+        <td id="show_num_lbl">Show Numbers</td><td><input id="show_num_txt" class="form_input_deposit" type="text"></td><td id="er_show"></td>
+        </tr>
+        <tr><td id="hid_num_lbl">Hidden Numbers</td><td><input id="hidden_num_txt" class="form_input_deposit" type="text"></td><td id="er_hidden"></td></tr>
+        <tr><td></td><td><div class="add_credit_btn" onclick="deposit_form_submit();"><span id="submit_deposit_form_btn" class="add_credit_text">Submit</span></div></td></tr>
+        </tbody></table>
+      <span id="dposit_msg" style="display:none;">  <span id="msg_line_one">Your id will blocked after</span>
+      <span id="msg_line_two">5</span>
+      <span id="msg_line_three">wrong attempts</span>
+
+      </span>
+      <span id="already_used_error_msg" style="display:none;">Card already used</span>
+
+</div>
+
+        </div>
+		</div>
+
+
+<style>
+.history_content{text-align:center;   
+ display: table;
+    margin: auto;}
+#history_form table {
+  border-collapse: collapse;
+  margin:auto;
+}
+
+#history_form table, #history_form table th, #history_form table td {
+  border: 1px solid black;
+  padding-left:5px;
+  padding-right:5px;
+  padding-top:2px;
+  padding-bottom:2px;
+  
+}
+
+.history_content table tbody tr:hover{background-color:white;color:black;}
+</style>
+<div id="history_form" class="ontop">
+<div class="background_deposit">
+        <div class="closedeposit_form" onclick="hidewinpop();">X</div>
+<div style="width:100%;margin-left: auto;margin-right: auto;position: relative;top: 10%;left:0;position: absolute;text-align: center;font-size: 21px;font-family: sans-serif;letter-spacing: -1px;font-weight: bold;">
+    <h1>My bets</h1>
+	<div class="history_content">
+        <table>
+            <thead>
+            <tr><th>Id</th>
+            <th>Date</th>
+            <th>Transaction Id</th>
+            <th>BetAmount</th>
+            <th>WinAmount</th>
+            <th>Status</th></tr>
+            </thead>
+            <tbody>
+        
+            
+            </tbody>
+            <tfoot>
+            <tr><td></td>
+            <td>Total</td>
+            <td></td>
+            <td>0</td>
+            <td>0</td>
+            <td></td>
+            </tr>
+            </tfoot>
+            </table>
+            <br>
+            <style>
+            .btnview{cursor:pointer;}
+            .btnnav{
+                padding-left:5px;
+                padding-right:5px;
+                cursor:pointer;
+                float:left;
+                margin-left:1px;
+                border: 1px solid black;
+            }
+            .pagemarked{background-color:white;color:black;}
+            
+            
+            </style>
+            
+            <div style="float:left;">1 To 0 of 0 Rows</div>
+            <div style="float:right;">
+            <div class="btnnav" onclick="navigatemybets(0);">Prev</div><div class="btnnav pagemarked" onclick="navigatemybets(1);">1</div><div class="btnnav" onclick="navigatemybets(0);">Next</div>
+            </div>
+        </div>
+	
+</div>
+	  
+</div>
+</div>
+
+<style>
+.scheduletickets_content{text-align:center;   
+ display: table;
+    margin: auto;
+	}
+@-webkit-keyframes marqueeAnimation-2541787  { 100%  {margin-left:-0px}}
+</style>
+<div id="scheduletickets_form" class="ontop">
+<div class="background_deposit">
+        <div class="closedeposit_form" onclick="hidewinpop();">X</div>
+<div style="width:100%;margin-left: auto;margin-right: auto;position: relative;top: 5%;left:0;position: absolute;text-align: center;font-size: 21px;font-family: sans-serif;letter-spacing: -1px;font-weight: bold;">
+    <h1>Buy Tickets</h1>
+	<div class="scheduletickets_content">
+	</div>
+	
+</div>
+	  
+</div>
+</div>
+
+
+<div id="winsplash"><style></style>
+
+      <input id="refreshedbal" type="hidden" value="0">
+     <input id="lblcong" type="hidden" value="Congratulations">
+     <input id="lblwon" type="hidden" value="Won">
+     <input id="lblyouhavewon" type="hidden" value="you have won">
+     <input id="lblformakingline" type="hidden" value="for making Line">
+     <input id="lblformakingbingo" type="hidden" value="for making Bingo">
+    
+     <div id="splash_announcement" class="ontop">
+     <div class="win_ticket_container"><h1>Winning tickets</h1><div class="tickets_raw"><div class="tocket_number">5190</div><div class="ticket"><div class="inticket_number  tkt_8">8</div><div class="inticket_number"></div><div class="inticket_number"></div><div class="inticket_number inticket_number_selected tkt_32">32</div><div class="inticket_number"></div><div class="inticket_number  tkt_57">57</div><div class="inticket_number inticket_number_selected tkt_64">64</div><div class="inticket_number"></div><div class="inticket_number inticket_number_selected tkt_82">82</div><div class="inticket_number inticket_number_selected tkt_5">5</div><div class="inticket_number inticket_number_selected tkt_14">14</div><div class="inticket_number inticket_number_selected tkt_27">27</div><div class="inticket_number inticket_number_selected tkt_30">30</div><div class="inticket_number"></div><div class="inticket_number"></div><div class="inticket_number"></div><div class="inticket_number"></div><div class="inticket_number  tkt_80">80</div><div class="inticket_number"></div><div class="inticket_number"></div><div class="inticket_number  tkt_24">24</div><div class="inticket_number inticket_number_selected tkt_36">36</div><div class="inticket_number"></div><div class="inticket_number  tkt_53">53</div><div class="inticket_number  tkt_65">65</div><div class="inticket_number"></div><div class="inticket_number inticket_number_selected tkt_81">81</div></div></div></div>
+                <div class="background_pink_announcement">
+            
+            <div style="width: auto;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            top: 0;
+            right: 0;
+            left: 0;
+            text-align: left;
+            font-size: 21px;
+            font-family: sans-serif;
+            letter-spacing: -1px;
+            font-weight: bold;
+            text-align: center;
+            width: 100%;">
+            <img class="jackpot123" src="images/jackpot_line_popup.png" alt="jackpot">
+    <span id="announcement_content_div">Congratulations 64_rupmagic_79280_1_3,<br>
+    you have won €500 for making Bingo</span>
+    
+    
+    
+    <div onclick="hidewinpop();" style="margin:auto; margin-top:10px; cursor:pointer;"><img src="images/btn_close.png" width="161" height="46" alt="close"></div>
+    
+    
+    </div>
+            </div>
+            </div>
+    
+              <div id="splashbingo" class="ontop">
+               <div class="win_ticket_container"><h1>Winning tickets</h1><div class="tickets_raw"><div class="tocket_number">5190</div><div class="ticket"><div class="inticket_number  tkt_8">8</div><div class="inticket_number"></div><div class="inticket_number"></div><div class="inticket_number inticket_number_selected tkt_32">32</div><div class="inticket_number"></div><div class="inticket_number  tkt_57">57</div><div class="inticket_number inticket_number_selected tkt_64">64</div><div class="inticket_number"></div><div class="inticket_number inticket_number_selected tkt_82">82</div><div class="inticket_number inticket_number_selected tkt_5">5</div><div class="inticket_number inticket_number_selected tkt_14">14</div><div class="inticket_number inticket_number_selected tkt_27">27</div><div class="inticket_number inticket_number_selected tkt_30">30</div><div class="inticket_number"></div><div class="inticket_number"></div><div class="inticket_number"></div><div class="inticket_number"></div><div class="inticket_number  tkt_80">80</div><div class="inticket_number"></div><div class="inticket_number"></div><div class="inticket_number  tkt_24">24</div><div class="inticket_number inticket_number_selected tkt_36">36</div><div class="inticket_number"></div><div class="inticket_number  tkt_53">53</div><div class="inticket_number  tkt_65">65</div><div class="inticket_number"></div><div class="inticket_number inticket_number_selected tkt_81">81</div></div></div></div>
+               
+                <div class="background_pink">
+            
+            <div style="    width: auto;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            top: 0;
+            right: 0;
+            left: 0;
+            text-align: left;
+            font-size: 21px;
+            font-family: sans-serif;
+            letter-spacing: -1px;
+            font-weight: bold;
+            text-align: center;">
+            <img class="jackpot123" src="images/bingo_popup.png" alt="jackpot">
+    <span id="bingo_win_content_div">Congratulations 64_rupmagic_79280_1_3,<br>
+    you have won €500 for making Bingo</span>
+    
+    
+    
+    <div onclick="hidewinpop();" style="margin:auto; margin-top:10px; cursor:pointer;"><img src="images/btn_close.png" width="161" height="46" alt="close"></div>
+    
+    
+    </div>
+            
+            </div>
+            </div>
+    
+              <div id="splashline" class="ontop" style="display: none;">
+               <div class="win_ticket_container"><h1>Winning tickets</h1><div class="tickets_raw"><div class="tocket_number">5190</div><div class="ticket"><div class="inticket_number  tkt_8">8</div><div class="inticket_number"></div><div class="inticket_number"></div><div class="inticket_number inticket_number_selected tkt_32">32</div><div class="inticket_number"></div><div class="inticket_number  tkt_57">57</div><div class="inticket_number inticket_number_selected tkt_64">64</div><div class="inticket_number"></div><div class="inticket_number inticket_number_selected tkt_82">82</div><div class="inticket_number inticket_number_selected tkt_5">5</div><div class="inticket_number inticket_number_selected tkt_14">14</div><div class="inticket_number inticket_number_selected tkt_27">27</div><div class="inticket_number inticket_number_selected tkt_30">30</div><div class="inticket_number"></div><div class="inticket_number"></div><div class="inticket_number"></div><div class="inticket_number"></div><div class="inticket_number  tkt_80">80</div><div class="inticket_number"></div><div class="inticket_number"></div><div class="inticket_number  tkt_24">24</div><div class="inticket_number inticket_number_selected tkt_36">36</div><div class="inticket_number"></div><div class="inticket_number  tkt_53">53</div><div class="inticket_number  tkt_65">65</div><div class="inticket_number"></div><div class="inticket_number inticket_number_selected tkt_81">81</div></div></div></div>
+               
+                <div class="background_pink2">
+            
+            <div style="    /* width: auto; */
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            top: 0;
+            right: 0;
+            left: 0;
+            text-align: left;
+            font-size: 21px;
+            font-family: sans-serif;
+            letter-spacing: -1px;
+            font-weight: bold;
+            text-align: center;
+            width: 100%;">
+            <img class="jackpot123" src="images/line_popup.png" alt="jackpot">
+                <span id="line_win_content_div">Congratulations 64_rupmagic_79280_1_3,<br>
+                    you have won €500 for making Line</span>
+                    
+    
+    <div onclick="hidewinpop();" style="margin:auto; margin-top:10px; cursor:pointer;"><img src="images/btn_close.png" width="161" height="46" alt="close"></div>
+    
+    
+    </div>
+    
+            
+             
+            
+            </div>
+            </div>
+    
+      
+    
+            <script>
+            var wintype = 1;
+            var congrats = document.getElementById("lblcong").value;
+            
+            var congratstxt = document.getElementById("lblcong").value;
+    
+            var won_text = document.getElementById("lblwon").value;
+    
+            var youhavewontxt =  document.getElementById("lblyouhavewon").value;
+            var formakinglinetxt =  document.getElementById("lblformakingline").value;
+            var formakingbingotxt = document.getElementById("lblformakingbingo").value;
+    
+            var array_values = "player153,EUR,13.3";
+            var uname = "64_rupmagic_79280_1_3";
+            var winning_currency = "€";
+           
+            var winning_money = 0;
+            var show_splash = 0;
+            var make_win_cal = 1;
+            switch(wintype){
+            case 1:
+            
+            for (var i = 0; i < array_values.split(',').length; i++) {
+                var wuser = array_values.split(',')[i];
+                if(wuser == uname){
+                     winning_money = parseFloat(array_values.split(',')[i + 1]) + parseFloat(winning_money);
+                     winning_currency = array_values.split(',')[i + 2];
+                     show_splash = 1;
+                }
+            }
+    
+            for (var i = 0; i < array_values.split(',').length; i++) {
+                                            switch (make_win_cal) {
+                                                    case 1:
+                                                        congrats = congrats +" "+ array_values.split(',')[i];
+                                                        make_win_cal++;
+                                                        break;
+                                                    case 2:
+                                                        congrats = congrats + " " + won_text + " " + array_values.split(',')[i];
+    
+                                                        make_win_cal++;
+                                                        break;
+                                                    case 3:
+                                                        congrats = congrats + array_values.split(',')[i] + ",";
+                                                        make_win_cal = 1;
+                                                        break;
+                                                }
+    
+                                            }
+    if(1 > 0 ){
+    $("#line_win_content_div").html("");
+    document.getElementById("splashline").style.display = 'block';
+    setTimeout(function(){document.getElementById("splashline").style.display = 'none';waiting_number = 0; },3000);
+    }
+                                                
+                                            if (show_splash == 1) {
+                                                $("#line_win_content_div").html(congratstxt+" " + uname + ",<br>"+youhavewontxt+" " +winning_currency+ winning_money.toFixed(2) + " "+formakinglinetxt);
+                                                
+                                            }
+    
+                                              congrats = congrats + formakinglinetxt;
+                                            document.getElementById("marq_div").innerHTML = "<div class='marquee'>" + congrats + "</div>";
+                                            
+    
+                                            $('.marquee').marquee({
+    
+                                        });
+                                         number_vol = 0;
+    break;
+    case 2:
+    document.getElementById("marq_div").innerHTML = "";
+                                        var marq_test = "";
+                                        marq_test = congratstxt+", ";
+    
+                                         var winning_money = 0;
+                                        var winning_currency;
+                                        var show_splash2 = 0; 
+                                        array_values = array_values.split(",");
+    
+                                          var make_win_cal = 1;
+                                        for (var i = 0; i < array_values.length; i++) {
+                                            if (array_values[i] == uname) {
+                                                winning_money = parseFloat(array_values[i + 1]) + parseFloat(winning_money);
+                                                winning_currency = array_values[i + 2];
+                                                show_splash2 = 1;
+                                            }
+                                        }
+                                         var make_win_cal = 1;
+    
+                                          for (var i = 0; i < array_values.length; i++) {
+                                            switch (make_win_cal) {
+                                                case 1:
+                                                    marq_test = marq_test + array_values[i];
+    
+                                                    make_win_cal++;
+    
+                                                    break;
+                                                case 2:
+                                                    marq_test = marq_test + " " + won_text + " " + array_values[i];
+    
+                                                    make_win_cal++;
+                                                    break;
+                                                case 3:
+                                                    marq_test = marq_test + array_values[i] + ",";
+    
+                                                    make_win_cal = 1;
+                                                    break;
+                                            }
+    
+                                        }
+    
+    if(1 > 0 ){								
+    $("#bingo_win_content_div").html("");
+     document.getElementById("splashbingo").style.display = 'block';
+     setTimeout(function(){document.getElementById("splashbingo").style.display = 'none';waiting_number = 0; },3000);
+     }
+                                            
+                                        if (show_splash2 == 1) {
+                                            $("#bingo_win_content_div").html(congratstxt+" " + uname + ",<br>"+youhavewontxt+" " +winning_currency+ winning_money.toFixed(2)+" "+formakingbingotxt);                                         
+                                           
+                                        }
+    
+                                         marq_test = marq_test + formakingbingotxt;
+                                         document.getElementById("marq_div").innerHTML = "<div style='color: gold;' class='marquee'>" + marq_test + "</div>";
+                                         $('.marquee').marquee({
+    
+                                         });
+    
+                                    binosound = 1;
+                                    number_vol = 0;
+    
+    break;
+            }
+    
+    
+            </script>
+    
+    
+            </div>
+
+
+        <div id="tickets_tbl" style="display:none;"></div>
+            <span id="number_sound" style=" display:none;"></span>
+            <span id="win_sound" style=" display:none;"></span>
+            <span id="scratched_sound" style=" display:none;"></span>
+            <span id="waiting_sound" style=" display:none;"></span>
+            <span style="display:none;">
+            <input id="lng_txt" runat="server" type="text">
+            <input id="congratulations_txt" runat="server" type="text">
+            <input id="you_have_won_txt" runat="server" type="text">
+            <input id="for_making_line_txt" runat="server" type="text">
+            <input id="for_making_bingo_txt" runat="server" type="text">
+            <input id="won_txt" runat="server" type="text">
+            <input id="my_tckts" runat="server" type="text">
+
+            
+
+             <input id="marquee_attention" runat="server" type="text">
+             <input id="splash_attention" runat="server" type="text">
+          
+
+            <input id="uname_txt" runat="server" type="text">
+            <input id="username_input" runat="server" type="text">
+            <input id="pass_input" runat="server" type="text">
+            <input id="user_id" runat="server" type="text">
+            
+            <input id="port" runat="server" type="text">
+            <input id="ip" runat="server" type="text"></span>
+
+
+
+        </section>
+
+
+
+		 
+		
+
+
+    </body>
+</html>
